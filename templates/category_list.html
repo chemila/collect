@@ -1,0 +1,22 @@
+
+											<table border=0 cellSpacing=0 cellPadding=0 style="border-collapse: collapse" width="100%" bgcolor="#FFFFFF">
+												<tr>
+													<td background="images/tb_background.gif" width=5% height=25><center><font  color="#FFFFFF">编号</font></center></td>
+													<td background="images/tb_background.gif" width=15%><center><font  color="#FFFFFF">父级目录</font></center></td>
+													<td background="images/tb_background.gif" width=45%>&nbsp;&nbsp;<font  color="#FFFFFF">路径</font></td>
+													<td background="images/tb_background.gif" width=5%><center><font  color="#FFFFFF">序号</font></center></td>
+													<td background="images/tb_background.gif" width=5%><center><font  color="#FFFFFF">排序</font></center></td>
+													<td background="images/tb_background.gif" width=15%><center><font  color="#FFFFFF">管理</font></center></td>
+												</tr>
+												<!-- BEGIN row -->
+												<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''">
+													<td style="border: 1px solid #CCCCCC" height=25 bgcolor="#F7F7F7"><center>{id}</center></td>
+													<td style="border: 1px solid #CCCCCC"><center>{pname}</center></td>
+													<td style="border: 0px solid #CCCCCC">{list}</td>
+													<td style="border: 1px solid #CCCCCC"><center>{orderid}</center></td>
+													<td style="border: 1px solid #CCCCCC">&nbsp&nbsp;<a href="?module=orderCategory&CID={id}&type=1"><img border="0" src="images/up_ico.gif" style="display:{imgup}" align="absmiddle" alt="把『{title}』上移"></a><a href="?module=orderCategory&CID={id}&type=2"><img border="0" src="images/down_ico.gif" style="display:{imgdown}" align="absmiddle" alt="把『{title}』下移"></a>&nbsp;&nbsp;</td>
+													<td style="border: 1px solid #CCCCCC" bgcolor="#F7F7F7"><center><a href="?module=addCategory&CID={id}">添加</a> <a href="?module=editCategory&CID={id}">编辑</a> <a OnClick="return window.confirm('您确定要删除分类『{title}』么?')" href="?module=delCategory&CID={id}">删除</a></center></td>
+													<a name="cid{id}">
+												</tr>
+												<!-- END row -->
+											</table>

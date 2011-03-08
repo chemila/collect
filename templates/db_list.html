@@ -1,0 +1,23 @@
+
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+ 						<tr>
+							<td height="25" width="100%"colspan="3"><p align="right"><a href="?module=">采集器列表</a> | <a href="?module=importDBRules">导入数据库配置</a> | <a href="?module=configDB">添加导入配置</a></p></td>
+						</tr>
+						<tr>
+							<td background="images/tb_background.gif" height="25" width="10%"><center><font color="#FFFFFF">ID</font></center></td>
+							<td background="images/tb_background.gif" width="50%">&nbsp;&nbsp;<font color="#FFFFFF">名字</font></td>
+							<td background="images/tb_background.gif" width="30%"><center><font color="#FFFFFF">管理</font></center></td>
+						</tr>
+						<!-- BEGIN list -->
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7"><center>{id}</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<a href="?module=listLink&rules={id}">{name}</a></td>
+							<td style="border: 1px solid #CCCCCC"><center><a href="?module=importDB&ID={id}">导入</a> | <a href="?module=copyDB&ID={id}" title="复制一个同样的配置">复制</a> | <a href="?module=editDB&ID={id}">编辑</a> | <a href="?module=exportDB&ID={id}">导出</a> | <a href="?module=delDB&ID={id}" OnClick="return window.confirm('您确定要删除编号为{id}的导入规则『{name}』么?');">删除</a></center></td>
+						</tr>
+						<!-- END list -->
+						<tr>
+							<td height="25" width="100%"colspan="3" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="center">&nbsp;</td>
+						</tr>
+					</table>
+					</center>

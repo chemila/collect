@@ -1,0 +1,78 @@
+<script language="JavaScript">
+function fCheck() {
+
+	if(rule.config_name.value =="") {
+		alert("请输入采集器名字");
+		rule.config_name.focus();
+		return false;
+	}
+
+	return true;
+}
+</script>
+                <form method=post action="index.php?module=exportRules&action=submit&ID={id}" name="rule" onSubmit="return fCheck()">
+                  <center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+                     <tr>
+						<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">采集器配置导出</font></td>
+					</tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="35%"> 
+                          <center>
+                            配置名称 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="65%"> 
+                          &nbsp;&nbsp; 
+                          <input type="text" name="config_name" value="{config_name}" class="button" size="40">
+                        </td>
+                      </tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="35%"> 
+                          <center>
+                            作者 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="65%"> 
+                          &nbsp;&nbsp; 
+                          <input type="text" name="author" class="button" size="40">
+                        </td>
+                      </tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="35%"> 
+                          <center>
+                            联系方式 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="65%"> 
+                          <br>
+                          &nbsp;&nbsp; 
+                          <textarea name="contact" cols="75" rows="8"></textarea>
+                          <br>
+                          <br>
+                        </td>
+                      </tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="35%"> 
+                          <center>
+                            导入说明 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="65%"> 
+                          <br>
+                          &nbsp;&nbsp; 
+                          <textarea name="readme" cols="75" rows="8"></textarea>
+                          <br>
+                          <br>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC" colspan="2"> 
+                          <p align="right"> 
+                            <input type="submit" value="开始导出" class="button">&nbsp;&nbsp;<input type=button class="button" value="返回列表" OnClick="self.location='?module=listRules'">
+                            &nbsp;&nbsp; 
+                        </td>
+                      </tr>
+                    </table>
+					</center>
+					</form>

@@ -1,0 +1,53 @@
+.treeItem
+{
+	
+}
+.treeItem span
+{
+	font-size:12px;
+	font-family:Verdana;
+	cursor:default;
+	margin-left:3px;
+	height:17px;
+	width:1px;
+}
+.treeItem span a
+{
+	padding:1 4;
+	width:100%;
+	height:100%;
+}
+.treeItem-unselect
+{
+	border:1px solid window;
+	background-color:window;
+	color:windowText;
+}
+.treeItem-selected
+{
+	border:1px solid windowText;
+	background-color:HighLight;
+	color:HighLightText;
+}
+.treeItem-unselect a
+{
+	text-decoration:none;
+	color:windowtext;
+}
+.treeItem-unselect a:hover
+{
+	color:#3366cc;
+	text-decoration:underline;
+}
+.treeItem-selected a
+{
+	color:#FFFFFF;
+	text-decoration:none;
+	width:100%;
+	height:100%;
+}
+.treeItem-selected a:hover
+{
+	color:HighLightText;
+	text-decoration:underline;
+}

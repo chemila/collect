@@ -1,0 +1,173 @@
+<form enctype="multipart/form-data" method="post" action="index.php?module=sysConfig&action=submit">				
+							<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+								<tr> 
+								<td colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"> 
+									<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+									  <tr> 
+										<td height="25" width="25%" background="images/tb_background.gif"> 
+										  <center>
+											<font color="#FFFFFF">登陆设置</font> 
+										  </center>
+										</td>
+										<td width="75%" background="images/tb_background.gif"></td>
+									  </tr>
+									</table>
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									登陆名字 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="username" value="{username}" class="button">
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									登陆密码 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="password" value="{password}" class="button">
+								</td>
+							  </tr>
+							  <tr> 
+								<td colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"> 
+									<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+									  <tr> 
+										<td height="25" width="25%" background="images/tb_background.gif"> 
+										  <center>
+											<font color="#FFFFFF">注册设置</font> 
+										  </center>
+										</td>
+										<td width="75%" background="images/tb_background.gif"></td>
+									  </tr>
+									</table>
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									注册类型 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;
+								<select name="reg_type">
+									<!-- BEGIN reg_type_option -->
+									<option value="{reg_type_value}" {reg_type_selected}>{reg_type_name}</option>
+									<!-- END reg_type_option -->
+								</select>
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									注册名字 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="reg_name" value="{reg_name}" class="button">
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									网络序列 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="reg_server_sn" value="{reg_server_sn}" class="button" size="35">
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									本地序列 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="reg_local_sn" value="{reg_local_sn}" class="button" size="35">
+								</td>
+							  </tr>
+							  <tr> 
+								<td colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"> 
+									<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+									  <tr> 
+										<td height="25" width="25%" background="images/tb_background.gif"> 
+										  <center>
+											<font color="#FFFFFF">分页设置</font> 
+										  </center>
+										</td>
+										<td width="75%" background="images/tb_background.gif"></td>
+									  </tr>
+									</table>
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									采集配置 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="page_rules" value="{page_rules}" class="button"> 条/页
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									连接列表 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="page_link" value="{page_link}" class="button"> 条/页
+								</td>
+							  </tr>
+							  <tr> 
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									文章列表 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="page_import" value="{page_import}" class="button"> 条/页
+								</td>
+							  </tr>
+							  <tr> 
+								<td colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"> 
+									<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+									  <tr> 
+										<td height="25" width="25%" background="images/tb_background.gif"> 
+										  <center>
+											<font color="#FFFFFF">其他设置</font> 
+										  </center>
+										</td>
+										<td width="75%" background="images/tb_background.gif"></td>
+									  </tr>
+									</table>
+								</td>
+								</tr>
+							  <tr>
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									水印字体 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;&nbsp;<input type="text" name="gd_font" value="{gd_font}" class="button" size="40"> (绝对，相对路径都可)
+								</td>
+							</tr>
+							  <tr>
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+								  <center>
+									调试模式 
+								  </center>
+								</td>
+								<td style="border: 1px solid #CCCCCC" width="75%">&nbsp;
+								<select name="debug">
+									<!-- BEGIN debug_option -->
+									<option value="{debug_value}" {debug_selected}>{debug_name}</option>
+									<!-- END debug_option -->
+								</select>
+								</td>
+							</tr>
+							  <tr> 
+								<td height="30" colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC" align="right"><input type="submit" value="确认修改" class="button">&nbsp;&nbsp;</td>
+								</tr>
+							</table>
+						</center>
+			</form>

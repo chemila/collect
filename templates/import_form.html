@@ -1,0 +1,34 @@
+			<form method=post action="index.php?module=import&action=getReady">
+			<center>
+						<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+							<tr>
+								<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">数据入库</font></td>
+							</tr>
+							<tr>
+								<td width="40%" height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><center>采集范围</center></td>
+								<td style="border: 1px solid #CCCCCC">&nbsp;
+								<select name="rulesID">
+								<option value=0>全部采集</option>
+								<!-- BEGIN option -->
+								<option value="{rulesID}"{rulesSelected}>{rulesName}</option>
+								<!-- END option -->
+								</select></td>
+							</tr>
+							<tr>
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><center>采集范围</center></td>
+								<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<input type="text" name="total" size="5" class="button"> 条 (留空表示采集全部连接)</td>
+							</tr>
+							<tr>
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><center>每次采集</center></td>
+								<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<input type="text" name="eachTimes" size="5" value="5" class="button"> 条</td>
+							</tr>
+							<tr>
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><center>采集顺序</center></td>
+								<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<input type="radio" name="">&nbsp;从新到旧&nbsp;&nbsp;<input type="radio" name="">&nbsp;从旧到新</td>
+							</tr>
+							<tr>
+								<td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" colspan="2" align="right"><input type="submit" value="开始采集" class="button">&nbsp;&nbsp;</td>
+							</tr>
+						</table>
+						</center>
+			</form>

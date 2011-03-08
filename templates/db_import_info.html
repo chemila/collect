@@ -1,0 +1,137 @@
+<script language="JavaScript">
+function fCheck() {
+
+	if(dbimport.configName.value =="") {
+		alert("请输入采集器名字");
+		dbimport.configName.focus();
+		return false;
+	}
+
+	return true;
+}
+</script>
+
+		<form method=post action="index.php?module=importDBRules&setp=import&path={path}" name="dbimport" onSubmit="return fCheck()">
+					<center>
+		<TABLE width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+		<TR>
+			<TD width="40%" valign="top"><table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+                       <tr>
+						<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">采集器列表</font></td>
+					</tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" width="100%" align=center> &nbsp;&nbsp;
+                          <select name="rulesID[]" size="9" multiple style="width:250">
+										<!-- BEGIN option -->
+										<option value="{rulesID}"{selected}>{rulesName}</option>
+										<!-- END option -->
+										</select>
+						</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="100" width="100%"> &nbsp;&nbsp;
+							采集器选择说明：<br>
+							 &nbsp;&nbsp;您可以从旁边的列表选择您已经配置好的采集器。<br>
+							 &nbsp;&nbsp;在导入数据时，被您选中的采集器的数据将会被导入到本配置中。<br>
+							 &nbsp;&nbsp;您可以选择一个或多个采集器对应本配置。(按住Ctrl可以选择多个采集器)
+						</td>
+                      </tr>
+                    </table>
+					</TD>
+			<TD width="60%">					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+                       <tr>
+						<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">数据库配置导入文件信息</font></td>
+					</tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            配置名称 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{config_name}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            作者名称 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{author}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            制作时间 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{date}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            联系方式 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          <center>
+                            <table width="98%">
+                              <tr> 
+                                <td>{contact}</td>
+                              </tr>
+                            </table>
+                          </center>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            附加说明 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          <center>
+                            <table width="98%">
+                              <tr> 
+                                <td>{readme}</td>
+                              </tr>
+                            </table>
+                          </center>
+                        </td>
+                      </tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#FFFFFF'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            程序版本 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{version}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            相对应数据库名 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;
+                          <input type="text" name="configName" value="{config_name}" class="button">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC" colspan="2"> 
+                          <p align="right"> 
+                            <input type="hidden" name="contents" value="{contents}">
+                            <input type="submit" value="开始导入" class="button">
+                            &nbsp;&nbsp; 
+                        </td>
+                      </tr>
+                    </table>
+</TD>
+		</TR>
+		</TABLE>
+					</center>
+					</form>

@@ -1,0 +1,94 @@
+<script> 
+function listDir() {
+	showModalDialog("modules/dir_list.php",this, 'dialogHeight:420px; dialogWidth:620px; resizable:no; status:no')
+}
+</script>
+<script>
+
+function showObj(objID, action)
+{
+	var obj = document.getElementById(objID);
+	action = (action == "show") ? "block" : "none";
+	obj.style.display = action;
+}
+
+function markimage()
+{
+	showObj('mark_image', 'show');
+	showObj('mark_text', 'hide');
+}
+
+function marktext()
+{
+	showObj('mark_text', 'show');
+	showObj('mark_image', 'hide');
+}
+
+</script>
+			<form enctype="multipart/form-data" method="post" action="index.php?module=bodySwfCollection&action=getReady">
+			<center>
+                    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+						<tr>
+								<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">FLASH采集</font></td>
+						</tr>
+						<tr> 
+						 <td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+                          <center>
+                            采集范围 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" width="75%">&nbsp; 
+                          <select name="rulesID">
+                            <option value=0>全部采集</option>
+                            <!-- BEGIN option -->
+                            <option value="{rulesID}"{rulesSelected}>{rulesName}</option>
+                            <!-- END option -->
+                          </select>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" align="center" width="25%">保存路径</td>
+                        <td style="border: 1px solid #CCCCCC" width="75%">&nbsp; 
+                          <input type="text" name="savePath" id="path" class="button" size="40">
+                          &nbsp;<input type="button" onClick="listDir()" value="浏览目录" class="button"> 
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+                          <center>
+                            采集范围 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" width="75%">&nbsp; 
+                          <input type="text" name="total" size="5" class="button">
+                          条 (留空表示采集全部连接)</td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" width="25%"> 
+                          <center>
+                            每次采集 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%">&nbsp; 
+                          <input type="text" name="eachTimes" size="5" value="5" class="button">
+                          条 (由于FLASH比较大，建议采用默认值)</td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" align="center" rowspan="2" width="25%">FLASH 大小限制</td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%">&nbsp;最大 
+                          <input type="text" name="maxsize" size="5" class="button">
+                          KB (大于的不采集,留空表示不限制)</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%">&nbsp;最小 
+                          <input type="text" name="minsize" size="5" class="button">
+                          KB (小于的不采集,留空表示不限制)</td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC" colspan="2" align="right"> 
+                          <input type="submit" value="开始采集" class="button" name="submit">&nbsp;&nbsp;
+                        </td>
+                      </tr>
+                    </table>
+						</center>
+			</form>

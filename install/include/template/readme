@@ -1,0 +1,27 @@
+<b><li>发布说明</li></b><br><br>
+<font color="red"> 本版本为2.0.0版本的预览版。(版本号:<font color=blue>cfgVersion BETA</font>)<br>
+由于发布时间仓促，功能还不完善，希望大家试用后能多提出宝贵意见！ <br>
+</font><br>
+
+<b><li>程序介绍</li></b><br><br>
+欢迎您安装使用 NEAT Collector。<br>
+NEAT Collector是一款具有强大的采集,导入功能的基于PHP+MySQL构架的通用采集软件。<br><br>
+
+<b><li>程序特点</li></b><br><br>
+1.支持多站点采集<br>
+2.多类型文章系统导入 (MySQL, Access, MsSQL)<br>
+3.系统内置标签,避免写正则表达式<br>
+4.图片采集到本地<br>
+5.文章分页采集支持<br>
+6.多过滤器设置<br><br>
+
+<b><li>请确认服务器支持以下配置</li></b><br><br>
+基本配置: PHP 4.1.0及更高版本，MySQL, Zend Optimizer, 服务器安全模式关闭并且支持远程打开<br>
+推荐配置: PHP 4.3.0及更高版本，MySQL, 商业用户需要GD库实现高级功能。<br>
+其他设置: 确保tmp，include文件夹以及include/config.inc.php文件为可写状态。<br>
+<br>
+
+<b><li>程序版权声明</li></b><br><br>
+NEAT·COLLECTOR 由 NEAT Studio 独立开发. 版权所有 (c) 2001-05, NEAT Studio 保留所有权.<br>
+在使用本产品中，如果您有任何方面的建议和意见，请与我们联系。<br><br>
+官方网站: <a href="http://www.neatstudio.com">http://www.neatstudio.com</a>

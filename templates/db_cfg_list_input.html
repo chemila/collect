@@ -1,0 +1,82 @@
+<script language=JavaScript>
+var text = "";
+var currentID = "77777777777777";
+function getActiveText(selectedtext) {
+  currentID = document.activeElement.id;
+	return true;
+}
+
+function AddText(NewCode) {
+	if (document.getElementById(currentID)) {
+		var currentObj = document.getElementById(currentID);
+	} else {
+		return false;
+	}
+	currentObj.value=NewCode
+}
+function addTag(tag) {
+	//AddTxt = text+tag;
+	AddText(tag);
+}
+</script>
+
+					<form method=post action="{post_to}">
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+						<tr>
+							<td height="25" background="images/tb_background.gif" colspan="3">&nbsp;&nbsp;<font color="#FFFFFF">建立对应关系</font></td>
+						</tr>
+						<!-- BEGIN field_list -->
+						<tr>
+							<td height="25" width="100%"colspan="3" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">&nbsp;&nbsp;{article_table}</td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid #CCCCCC" height="25" width="10%" bgcolor="#F7F7F7"><center>序号</center></td>
+							<td style="border: 1px solid #CCCCCC" width="60%" bgcolor="#F7F7F7">&nbsp;&nbsp;字段</td>
+							<td style="border: 1px solid #CCCCCC" width="30%" bgcolor="#F7F7F7"><center>对应</center></td>
+						</tr>
+						<!-- BEGIN list -->
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7"><center>{order}</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<span onClick="addTag('{tag_value}')" style="CURSOR: hand">{fields}</span></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<input type="text" name="hypotaxis[{article_table_id}][{fields}]" onfocus="getActiveText(this)" onclick="getActiveText(this)"  onchange="getActiveText(this)" id="hypotaxis_{article_table_id}_{fields}" size="25" value="{value}" class="button"></td>
+						</tr>
+						<!-- END list -->
+						<!-- END field_list -->
+						<tr>
+							<td height="25" width="100%"colspan="3" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="center">导入向导</td>
+						</tr>
+						<tr>
+							<td width="100%" colspan="3" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC">
+								<center>
+								<table width="98%">
+ 								<tr>
+									<td height="5"></td>
+								</tr>
+								<tr>
+									<td>
+									请在上面的列表中建立对应关系.<br>
+									如果输入系统可识别的字段标签,那么系统会自动转换成文章库的字段名.<br>
+									如果留空,系统则会设置该字段内容为空.<br>
+									如果输入其他,系统则在导入数据时,默认填入您所输入的内容.<br><br>
+									系统可识别字段标签 :<br> <font color="red" onClick="addTag('[标题]')" style="CURSOR: hand">[标题]</font> <font color="red" onClick="addTag('[内容]')" style="CURSOR: hand">[内容]</font> <font color="red" onClick="addTag('[来源]')" style="CURSOR: hand">[来源]</font> <font color="red" onClick="addTag('[作者]')" style="CURSOR: hand">[作者]</font> <font color="red" onClick="addTag('[简介]')" style="CURSOR: hand">[简介]</font> <font color="red" onClick="addTag('[网址]')" style="CURSOR: hand">[网址]</font> <font color="red" onClick="addTag('[文章编号]')" style="CURSOR: hand">[文章编号]</font><br><font color="red" onClick="addTag('[时间]')" style="CURSOR: hand">[时间]</font> <font color="red" onClick="addTag('[时间格式:Y-m-d]')" style="CURSOR: hand">[时间格式:Y-m-d]</font> <font color="red" onClick="addTag('[采集时间]')" style="CURSOR: hand">[采集时间]</font> <font color="red" onClick="addTag('[采集时间格式:Y-m-d]')" style="CURSOR: hand">[采集时间格式:Y-m-d]</font><br><font color="red" onClick="addTag('[随机:5,4]')" style="CURSOR: hand">[随机:5,4]</font><br><br>
+									其中[时间格式:Y-m-d]标签用来添加当前时间.<br>
+									这里的"Y-m-d"会得到形如"2004-12-19"格式的日期,可以自定义需要的格式.<br>
+									[时间]标签用来添加当前得unix时间戳.<br>
+									[采集时间]和[采集时间格式:Y-m-d]标签的功能和上面两个一样,只是他们采用的时间为采集文章时的时间.<br>
+									[随机:5,4]标签用来产生随机字符,"5"表示生成的字符串的长度,"4"是类型(1是数字类型,2是小写字母,3是大写字母,4是数字字母混合型).
+									</td>
+								</tr>
+								<tr>
+									<td height="5"></td>
+								</tr>
+								</table>
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" width="100%"colspan="3" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="right"><input type="button" onclick="JAVASCRIPT:history.go(-1);" value="上一步" class="button">&nbsp;<input type="submit" value="下一步" class="button">&nbsp;&nbsp;</td>
+						</tr>
+					</table>
+					</center>
+					</form>

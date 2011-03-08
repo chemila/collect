@@ -1,0 +1,32 @@
+					<form method=post action="index.php?module=copyRules&action=submit&ID={id}">
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+						<tr>
+							<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">复制采集器</font></td>
+						</tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="35%">
+                          <center>
+                            采集器复制源 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="65%">
+						&nbsp;&nbsp;{ruleName}
+						</td>
+                      </tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="35%"><center>新采集器名称</center></td>
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="65%"> 
+                          &nbsp;&nbsp;<input type="text" name="newRuleName" class="button" size="30">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC" colspan="2"> 
+                          <p align="right"> 
+                            <input type="submit" value="复制" class="button">
+                            &nbsp;&nbsp; 
+                        </td>
+                      </tr>
+                    </table>
+					</center>
+					</form>

@@ -1,0 +1,68 @@
+<script>
+function CheckAll()
+{
+	for (var i=0;i<delform.elements.length;i++)
+	{
+		var e = delform.elements[i];
+		if (e.type=='checkbox')
+		{
+			if (e.checked == false)
+				e.checked = true;
+			else
+				e.checked = false;
+		}
+	}
+}
+</script>
+
+			<center>
+			<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+				<tr>
+					<td height="25" colspan="5" align="right">
+					<a href="?module=listLink&rules={rulesID}">连接库列表</a> | <a href="?module=listRules">采集器列表</a>
+					</td>
+				</tr>
+				<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+				<tr>
+					<td background="images/tb_background.gif" height="25" width="10%"><center><font color="#FFFFFF">ID</font></center></td>
+					<td background="images/tb_background.gif" width="40%">&nbsp;&nbsp;<font color="#FFFFFF">名字</font></td>
+					<td background="images/tb_background.gif" width="20%"><center><font color="#FFFFFF">采集器</font></center></td>
+					<td background="images/tb_background.gif" width="15%"><center><font color="#FFFFFF">时间</font></center></td>
+					<td background="images/tb_background.gif" width="5%"><center><font color="#FFFFFF">取图</font></center></td>
+					<td background="images/tb_background.gif" width="10%"><center><font color="#FFFFFF">管理</font></center></td>
+				</tr>
+				<tr>
+					<td height="30" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><center>采集器</center></td>
+					<td bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">&nbsp;
+					<select name="rulesID" onchange="location='?module=listImport&rules='+this.options[this.selectedIndex].value">
+					<option>全部采集器</option>
+					<!-- BEGIN option -->
+					<option value="{rulesID}"{rulesSelected}>{rulesName}</option>
+					<!-- END option -->
+					</select></td>
+					<td height="30" align="right" colspan="4" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">{pageBar}</td>
+				</tr>
+				
+				<!-- BEGIN list -->
+				<form method=post action="?module=delImport" name="delform">
+				<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''">
+					<td style="border: 1px solid #CCCCCC" height="25" bgcolor="#F7F7F7"><center>{id}</center></td>
+					<td style="border: 1px solid #CCCCCC"><input type="checkbox" name="ID[]" value="{link_id}">&nbsp;<a href="?module=viewImport&ID={id}" alt="完整标题:{fullTitle}">{title}</a></td>
+					<td style="border: 1px solid #CCCCCC"><center>{rules}</center></td>
+					<td style="border: 1px solid #CCCCCC"><center>{date}</center></td>
+					<td style="border: 1px solid #CCCCCC" bgcolor="{img_geted_bg}"><center>{img_geted}</center></td>
+					<td style="border: 1px solid #CCCCCC"><center><a href="?module=delImport&ID={link_id}" OnClick="return window.confirm('您确定要删除编号为{id}的数据『{title_js}』么?');">删除</a></center></td>
+				</tr>
+				<!-- END list -->
+				<tr>
+					<td height="25" colspan="5" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">
+					&nbsp&nbsp;总数 : {total} 条
+					</td>
+					<td bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><center><a href="#top">返回顶部</a></center></td>
+				</tr>
+				<tr>
+					<td height="25" align="right" colspan="6">&nbsp;&nbsp;&nbsp;<a href="#delall" alt="把该页面显示的连接全部选中" onclick="CheckAll()">全选连接</a>&nbsp;&nbsp;<a OnClick="return window.confirm('您确定要删除您选中的连接么?');" href="javascript:document.delform.submit()" alt="把该页面选择了的连接全部删除">删除选择</a></td>
+				</tr>
+			</table>
+			</center>
+</form>

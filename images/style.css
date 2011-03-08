@@ -1,0 +1,73 @@
+UL {
+	FONT-SIZE: 9pt; FONT-FAMILY: tahoma, arial, helvetica, sans-serif
+}
+LI {
+	FONT-SIZE: 9pt; FONT-FAMILY: tahoma, arial, helvetica, sans-serif
+}
+P {
+	FONT-SIZE: 9pt; COLOR: #444444; FONT-FAMILY: tahoma, arial, helvetica, sans-serif
+}
+TD {
+	FONT-SIZE: 9pt; COLOR: #444444; FONT-FAMILY: tahoma, arial, helvetica, sans-serif
+}
+SELECT {
+	BORDER-RIGHT: #cccccc 1px groove; BORDER-TOP: #cccccc 1px groove; FONT-SIZE: 9pt; BORDER-LEFT: #cccccc 1px groove; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px groove; FONT-FAMILY: tahoma, arial, helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+INPUT {
+	FONT-SIZE: 9pt;FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #F7F7F7
+}
+TEXTAREA {
+	FONT-SIZE: 9pt;COLOR: #000000; FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif; BACKGROUND-COLOR: #ffffff
+}
+TEXTAREA.code {
+	BORDER-RIGHT: #cccccc 1px groove; BORDER-TOP: #cccccc 1px groove; FONT-SIZE: 9pt; BORDER-LEFT: #cccccc 1px groove; COLOR: #000000; BORDER-BOTTOM: #cccccc 1px groove; FONT-FAMILY: Courier New, Tahoma, Verdana; BACKGROUND-COLOR: #ffffff
+}
+OPTION {
+	FONT-SIZE: 0.8em; COLOR: #51485f; BACKGROUND-COLOR: #f3f3f3
+}
+FORM {
+	FONT-WEIGHT: normal; LINE-HEIGHT: normal; FONT-STYLE: normal; FONT-FAMILY: Tahoma, Verdana
+}
+A:active {
+	COLOR: #444444
+}
+A:visited {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #444444; TEXT-DECORATION: underline
+}
+A:link {
+	COLOR: #444444; TEXT-DECORATION: none
+}
+.smalltext {
+	FONT-SIZE: 8pt; COLOR: #333333; FONT-FAMILY: verdana,arial,sans-serif
+}
+
+BODY {
+	SCROLLBAR-FACE-COLOR: #336699; FONT-WEIGHT: normal; FONT-SIZE: 11px; MARGIN: 10px; SCROLLBAR-HIGHLIGHT-COLOR: #000000; SCROLLBAR-SHADOW-COLOR: #98b2cc; COLOR: #000000; SCROLLBAR-3DLIGHT-COLOR: #98b2cc; SCROLLBAR-ARROW-COLOR: #ffffff; SCROLLBAR-TRACK-COLOR: #98b2cc; FONT-FAMILY: "Trebuchet MS", Verdana, Arial, Helvetica, sans-serif; SCROLLBAR-DARKSHADOW-COLOR: #000000; TEXT-DECORATION: none
+}
+
+.cate
+{ 
+	font-family: Tahoma, Verdana;
+	font-size: 9pt;
+	color: #666666;
+	font-weight: bold;
+	border: 1px solid #CCCCCC;
+	BACKGROUND-COLOR: #EFEFEF
+}
+
+.cateborder {
+border: 1px solid #CCCCCC;}
+
+.pxborder {
+border: 1px solid #CCCCCC;}
+
+.button {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px double; BORDER-LEFT: #cccccc 1px double; BORDER-RIGHT: #cccccc 1px double; BORDER-TOP: #cccccc 1px double; COLOR: #333333; FONT-FAMILY: MS Shell Dlg,Tahoma, sans-serif; FONT-SIZE: 9pt; HEIGHT: 20px
+}
+
+TEXTAREA {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px double; BORDER-LEFT: #cccccc 1px double; BORDER-RIGHT: #cccccc 1px double; BORDER-TOP: #cccccc 1px double; COLOR: #333333; FONT-FAMILY: ËÎÌו,Tahoma, Arial; FONT-SIZE: 9pt;
+}

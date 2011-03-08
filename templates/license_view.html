@@ -1,0 +1,24 @@
+		<form method=post action="index.php?module=generateLicense&action=generate">
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse" >
+						<tr>
+							<td height="25" width="100%"colspan="2" background="images/tb_background.gif"><p align="center"><font color="#FFFFFF">注册信息</font></td>
+						</tr>
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = '#FFFFFF'">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="30%"><center>授权类型</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;{reg_type}</td>
+						</tr>
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = '#FFFFFF'">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="30%"><center>注册名字</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;{reg_name}</td>
+						</tr>
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = '#FFFFFF'">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="30%"><center>访问域名</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;{reg_domain}</td>
+						</tr>
+						<tr>
+							<td height="30" width="100%"colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="right"> <input type=button value="采集器列表" OnClick="self.location='?module=listRules'" class="button">&nbsp;&nbsp;<input type=button value="生成授权码" OnClick="self.location='?module=generateLicense'" class="button">&nbsp;&nbsp;</td>
+						</tr>
+					</table>
+					</center>
+		</form>

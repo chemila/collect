@@ -1,0 +1,90 @@
+.versioninfo {color:#666666;font-size:11px}
+form {display:inline}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 12px;
+}
+pre {
+	font-family: Arial, Helvetica, sans-serif;
+	color: #000000;
+	font-size: 12px;
+}
+td, textarea{
+	color: #000000;
+	font-size: 11px;
+	font-family: Tahoma, Verdana, Arial;
+}
+li {
+	list-style-type: square;
+	font-size: 11px;
+}
+.error {
+	font-weight: normal;
+	color: #FF0000;
+	font-size: 11px;
+}
+.tableborder {
+	background-color: #D8DBD7;
+	border-top: 1px solid #BBBBBB;
+	border-right: 1px solid #737373;
+	border-bottom: 1px solid #737373;
+	border-left: 1px solid #BBBBBB;
+}
+.setupheader {
+	background-color: #454545;
+	font-size: 14px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.setupbody {
+	background-color: buttonface;
+}
+a, a.link, a.visited {color: #003366;}
+.ok {
+	color: #003366;
+	font-size: 11px;
+}
+.button {
+	height: 22px;
+	font-size:12px;
+	cursor: pointer;
+	color: #000000;
+	font-family: Tahoma, Verdana, Arial;
+}
+.topheader {
+	background-color: #336699;
+	padding: 3px;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+.header_box {
+	background-color: #FFFFFF;
+	padding: 15px 10px 10px;
+	height: 40px;
+	vertical-align: middle;
+}
+.install_box {
+	background-color: #D4D0C8;
+	padding: 10px;
+}
+.firsthr {
+	background-color: #808080;
+}
+.secondhr {
+	background-color: #FFFFFF;
+}
+.button1 {
+	cursor: pointer;
+	BACKGROUND-COLOR: #EEEEEE; 
+	BORDER-BOTTOM: #cccccc 1px double; 
+	BORDER-LEFT: #cccccc 1px double; 
+	BORDER-RIGHT: #cccccc 1px double; 
+	BORDER-TOP: #cccccc 1px double; 
+	COLOR: #333333; 
+	FONT-FAMILY: MS Shell Dlg,Tahoma, 
+	sans-serif; 
+	FONT-SIZE: 11pt; 
+	HEIGHT: 18px
+}
+

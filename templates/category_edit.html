@@ -1,0 +1,31 @@
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+<form method=post action="index.php?module=editCategory&CID={id}&action=submit">
+	<tr>
+		<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">采集器分类</font></td>
+	</tr>
+	<tr>
+		<td width="30%" height="30" style="border: 1px solid #CCCCCC"><center>上级分类</center></td>
+		<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;
+		<select name="pid">{option}</select>
+		</td>
+	</tr>
+	<tr>
+		<td width="30%" height="30" style="border: 1px solid #CCCCCC"><center>分类名称</center></td>
+		<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;
+		<input type="text" name="title" value="{title}" size="30" class="button">
+		</td>
+	</tr>
+	<tr>
+		<td width="30%" height="30" style="border: 1px solid #CCCCCC"><center>栏目排序</center></td>
+		<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;
+		<input type="text" name="orderid" value="{orderid}" size="5" class="button">&nbsp;&nbsp;&nbsp;( 一般情况下,不建议修改此参数,程序会自动排序 )
+		</td>
+	</tr>
+	<tr>
+		<td width="30%" height="30" style="border: 1px solid #CCCCCC"></td>
+		<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;
+		<input type="submit" value="修改分类信息" class="button">
+		</td>
+	</tr>
+</form>
+</table>

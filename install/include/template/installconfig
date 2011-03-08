@@ -1,0 +1,82 @@
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+	function checkTablepre(tableid)
+	{
+		if(confirm("只有在数据库里已经有安装 neatcollector 或其它\n表前缀为 "+tableid.value+" 时，才需要更改表前缀，你确认要更\n改吗？"))
+		{
+		//	tableid.readonly = false;
+			return true;
+		}
+		else return false;
+	}
+//-->
+</SCRIPT><br>
+<center>
+	<table width="95%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+		  <tr> 
+			<td width="27%" align="right"> 数据库服务器</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp;
+			  <input type="text" name="databaseserver" class="button1" value="DBHOST"> * 默认 : localhost
+			</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">数据库用户名</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp;
+			<input type="text" name="databaseuser" class="button1" value="DBUSER"> * 默认 : root
+			</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">数据库密码</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp;
+			  <input type="text" name="databasepassword" class="button1" value="DBPASS"> * 默认 : root
+			</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right"> 数据库名</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp;
+			  <input type="text" name="database" class="button1" value="DBNAME"> * 默认 : neatcollector
+			</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">表前缀</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp;
+			  <input type="text" name="tablepre" value="DBPRE" class="button1" onclick="checkTablepre(tablepre)" >
+			</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">&nbsp;</td>
+			<td width="73%" align="left">&nbsp;</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">水印字体</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp;
+			  <input type="text" name="gdfont" value="FONT" class="button1">
+		  </td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">&nbsp;</td>
+			<td width="73%" align="left">&nbsp;</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">登陆名字</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp; 
+			  <input type="text" name="username" class="button1" value="ADMINNAME"> * 登录 NC 的用户名
+			</td>
+		  </tr>
+		  <tr> 
+			<td width="27%" align="right">登陆密码</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp; 
+			  <input type="password" name="password" class="button1" value="ADMINPASS">
+			</td>
+		  </tr>
+		  <tr>
+			<td width="27%" align="right">重复密码</td>
+			<td width="73%" align="left">&nbsp;&nbsp;&nbsp;
+			  <input type="password" name="passwordconfirm" class="button1"  value="ADMINPASS">
+			</td>
+		  </tr>
+		  <tr> 
+			<td colspan=2 align="center"><font color=blue>&nbsp;<INPUT TYPE="checkbox" NAME="deldb" value="1" unchecked> 是否删除原有的数据库 </font></td>
+		  </tr>
+	</table>
+</center>

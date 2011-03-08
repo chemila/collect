@@ -1,0 +1,109 @@
+<script language="JavaScript">
+function fCheck() {
+
+	if(rule.ruleName.value =="") {
+		alert("请输入采集器名字");
+		rule.ruleName.focus();
+		return false;
+	}
+
+	return true;
+}
+</script>
+
+					<form method=post action="index.php?module=importRules&setp=import&path={path}" name="rule" onSubmit="return fCheck()">
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+                       <tr>
+						<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">采集器配置导入文件信息</font></td>
+					</tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            配置名称 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{config_name}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            作者名称 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{author}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            制作时间 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{date}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            联系方式 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          <center>
+                            <table width="98%">
+                              <tr> 
+                                <td>{contact}</td>
+                              </tr>
+                            </table>
+                          </center>
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            附加说明 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          <center>
+                            <table width="98%">
+                              <tr> 
+                                <td>{readme}</td>
+                              </tr>
+                            </table>
+                          </center>
+                        </td>
+                      </tr>
+                      <tr onMouseOver="this.style.backgroundColor = '#FFFFFF'" onMouseOut="this.style.backgroundColor = ''"> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            程序版本 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;{version}</td>
+                      </tr>
+                      <tr> 
+                        <td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="25%"> 
+                          <center>
+                            采集器名 
+                          </center>
+                        </td>
+                        <td style="border: 1px solid #CCCCCC" height="30" width="75%"> 
+                          &nbsp;&nbsp;
+                          <input type="text" name="ruleName" value="{config_name}" class="button">
+                        </td>
+                      </tr>
+                      <tr> 
+                        <td height="30" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC" colspan="2"> 
+                          <p align="right"> 
+                            <input type="hidden" name="contents" value="{contents}">
+                            <input type="submit" value="开始导入" class="button">
+                            &nbsp;&nbsp; 
+                        </td>
+                      </tr>
+                    </table>
+					</center>
+					</form>

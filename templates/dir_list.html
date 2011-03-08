@@ -1,0 +1,60 @@
+<html>
+<head>
+<title>目录浏览</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+<style type="text/css">
+<!--
+BODY {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px}
+TABLE {  font-family: "Verdana", "Arial", "Helvetica", "sans-serif"; font-size: 12px}
+a:link {  text-decoration: none; color: #000000}
+a:visited {  text-decoration: none; color: #000000}
+a:active {  text-decoration: none; color: #000000}
+a:hover {  color: #000000}
+.button {
+	BACKGROUND-COLOR: #ffffff; BORDER-BOTTOM: #cccccc 1px double; BORDER-LEFT: #cccccc 1px double; BORDER-RIGHT: #cccccc 1px double; BORDER-TOP: #cccccc 1px double; COLOR: #333333; FONT-FAMILY: MS Shell Dlg,Tahoma, sans-serif; FONT-SIZE: 9pt; HEIGHT: 20px
+}
+-->
+</style>
+<script>
+function ok(dir)
+{
+	var a = window.dialogArguments;
+	var Obj = a.document.getElementById('path');
+	Obj.value = dir;
+	window.close();
+}
+</script> 
+<base target="_self">
+<body bgcolor="#FFFFFF" text="#000000" leftmargin="0" topmargin="0">
+<table width="100%" border="0" align="center">
+  <tr bgcolor="#F7F7F7"> 
+    <td colspan="4">&nbsp;&nbsp;请选择一个目录保存采集到本地的图片. <input type="button" onClick="ok('{childDir}')" value="选择当前目录" class="button"></td>
+  </tr>
+  <tr height="25" bgcolor="#EFEFEF"> 
+    <td colspan="4">&nbsp;&nbsp;当前路径：{childDir}</td>
+  </tr>
+  <tr height="25" bgcolor="#F7F7F7"> 
+    <td width="29%">&nbsp;&nbsp;名称</td>
+    <td width="37%">&nbsp;&nbsp;时间</td>
+    <td width="24%">&nbsp;&nbsp;大小</td>
+    <td width="10%">&nbsp;&nbsp;属性</td>
+  </tr>
+  <tr height="25" bgcolor="#EFEFEF"> 
+    <td width="29%">&nbsp;&nbsp;<a href="?dir=..&currentdir={path}">上层目录..</a></td>
+    <td width="37%">&nbsp;</td>
+    <td width="24%">&nbsp;</td>
+    <td width="10%">&nbsp;</td>
+  </tr>
+<!-- BEGIN list -->
+  <tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''"> 
+    <td width="29%">&nbsp;&nbsp;{sub}</td>
+    <td width="37%">&nbsp;&nbsp;{date}</td>
+    <td width="24%">&nbsp;&nbsp;{size}</td>
+    <td width="10%">&nbsp;&nbsp;{mode}</td>
+  </tr>
+<!-- END list -->
+</table>
+
+</body>
+</html>

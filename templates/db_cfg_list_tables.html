@@ -1,0 +1,47 @@
+
+					<form method=post action="{post_to}">
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+						<tr>
+							<td height="25" background="images/tb_background.gif" colspan="4">&nbsp;&nbsp;<font color="#FFFFFF">目标数据库 “{database}” 的数据表</font></td>
+						</tr>
+						<tr>
+							<td style="border: 1px solid #CCCCCC" height="25" width="5%" bgcolor="#EFEFEF"><center>选</center></td>
+							<td style="border: 1px solid #CCCCCC" width="55%" bgcolor="#EFEFEF">&nbsp;&nbsp;数据表名</td>
+							<td style="border: 1px solid #CCCCCC" width="20%" bgcolor="#EFEFEF"><center>数据类型</center></td>
+							<td style="border: 1px solid #CCCCCC" width="20%" bgcolor="#EFEFEF"><center>数据统计</center></td>
+						</tr>
+						<!-- BEGIN list -->
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = ''">
+							<td style="border: 1px solid #CCCCCC" height="25" bgcolor="#F7F7F7"><center><input type="checkbox" name="table[]" value="{name}" {checked}></center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;{name}</td>
+							<td style="border: 1px solid #CCCCCC"><center>{type}</center></td>
+							<td style="border: 1px solid #CCCCCC"><center>{rows}</center></td>
+						</tr>
+						<!-- END list -->
+						<tr>
+							<td height="25" width="100%"colspan="4" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="center">导入向导</td>
+						</tr>
+						<tr>
+							<td width="100%" colspan="4" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC">
+								<center>
+								<table width="98%">
+								<tr>
+									<td height="5"></td>
+								</tr>
+								<tr>
+									<td>请您在上面列表中选择您要导入的文章数据表,然后点“下一步”.</td>
+								</tr>
+								<tr>
+									<td height="5"></td>
+								</tr>
+								</table>
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" width="100%"colspan="4" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="right"><input type="button" onclick="JAVASCRIPT:history.go(-1);" value="上一步" class="button">&nbsp;<input type="submit" value="下一步" class="button">&nbsp;&nbsp;</td>
+						</tr>
+					</table>
+					</center>
+					</form>

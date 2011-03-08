@@ -1,0 +1,152 @@
+<script>
+function showObj(objID, action)
+{
+	var obj = document.getElementById(objID);
+	action = (action == "show") ? "block" : "none";
+	obj.style.display = action;
+}
+
+function mysql()
+{
+	showObj('mysql', 'show');
+	showObj('access', 'hide');
+	//showObj('mssql', 'hide');
+}
+
+function access()
+{
+	showObj('access', 'show');
+	showObj('mysql', 'hide');
+	//showObj('mssql', 'hide');
+}
+
+function mssql()
+{
+	//showObj('mssql', 'show');
+	showObj('mysql', 'hide');
+	showObj('access', 'hide');
+}
+
+</script>
+
+<script language="JavaScript">
+function fCheck() {
+
+	if(form.MYSQL_TARGET_DB_HOST.value=="" && form.ADO_ACCESS_TARGET_DB_HOST.value=="" && form.ADO_MSSQL_TARGET_DB_HOST.value=="") {
+		alert("请输入数据库地址");
+		return false;
+	}
+	return true;
+}
+</script>
+
+					<form method=post name="form" action="{post_to}" onSubmit="return fCheck()">
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+						<tr>
+							<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">选择目标数据库类型</font></td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" style="border: 1px solid #CCCCCC">
+								<table width="100%" border=0>
+								<tr>
+									<td width="30%" height="25" bgcolor="#F7F7F7"><center>数据库类型</center></td>
+									<td>
+										&nbsp;&nbsp;
+										<input type="radio" name="type" value="mysql" onclick="mysql()" {mysql_checked}>&nbsp;MYSQL&nbsp;<input type="radio" name="type" value="ado_access" onclick="access()" {ado_access_checked}>&nbsp;ACCESS&nbsp;<!--<input type="radio" name="type" value="ado_mssql" onclick="mssql()" {ado_mssql_checked}>&nbsp;MSSQL-->
+									</td>
+								</tr>
+								</table>
+							</td>
+						</tr>
+						<tr>
+							<td height="25" background="images/tb_background.gif" colspan="2">&nbsp;&nbsp;<font color="#FFFFFF">目标数据库连接设置</font></td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" style="border: 1px solid #CCCCCC">
+								<!-- MYSQL CONFIG FROM START -->
+								<table width="100%" border=0 id='mysql' style="display:{mysql_display}">
+								<tr>
+									<td width="30%" height="25" bgcolor="#F7F7F7"><center>MYSQL数据库地址</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="MYSQL_TARGET_DB_HOST" value="{MYSQL_TARGET_DB_HOST}" class="button"></td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>MYSQL数据库用户</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="MYSQL_TARGET_DB_USER" value="{MYSQL_TARGET_DB_USER}" class="button"></td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>MYSQL数据库密码</center></td>
+									<td>&nbsp;&nbsp;<input type="password" name="MYSQL_TARGET_DB_PASS" value="{MYSQL_TARGET_DB_PASS}" class="button"></td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>MYSQL数据库名称</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="MYSQL_TARGET_DB_NAME" value="{MYSQL_TARGET_DB_NAME}" class="button"></td>
+								</tr>
+								</table>
+								<!-- MYSQL CONFIG FROM END -->
+								<!-- ACCESS CONFIG FROM START -->
+								<table width="100%" border=0 id='access' style="display:{ado_access_display}">
+								<tr>
+									<td width="30%" height="25" bgcolor="#F7F7F7"><center>ACCESS数据库路径</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="ADO_ACCESS_TARGET_DB_HOST" value="{ADO_ACCESS_TARGET_DB_HOST}" class="button">&nbsp;&nbsp;绝对,相对路径都可</td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>ACCESS数据库用户</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="ADO_ACCESS_TARGET_DB_USER" value="{ADO_ACCESS_TARGET_DB_USER}" class="button"></td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>ACCESS数据库密码</center></td>
+									<td>&nbsp;&nbsp;<input type="password" name="ADO_ACCESS_TARGET_DB_PASS" value="{ADO_ACCESS_TARGET_DB_PASS}" class="button"></td>
+								</tr>
+								</table>
+								<!-- ACCESS CONFIG FROM START -->
+								<!-- MSSQL CONFIG FROM START -->
+								<!--
+								<table width="100%" border=0 id='mssql' style="display:{ado_mssql_display}">
+								<tr>
+									<td width="30%" height="25" bgcolor="#F7F7F7"><center>MSSQL数据库地址</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="ADO_MSSQL_TARGET_DB_HOST" value="{ADO_MSSQL_TARGET_DB_HOST}" class="button"></td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>MSSQL数据库用户</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="ADO_MSSQL_TARGET_DB_USER" value="{ADO_MSSQL_TARGET_DB_USER}" class="button"></td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>MSSQL数据库密码</center></td>
+									<td>&nbsp;&nbsp;<input type="password" name="ADO_MSSQL_TARGET_DB_PASS" value="{ADO_MSSQL_TARGET_DB_PASS}" class="button"></td>
+								</tr>
+								<tr>
+									<td height="25" bgcolor="#F7F7F7"><center>MSSQL数据库名称</center></td>
+									<td>&nbsp;&nbsp;<input type="text" name="ADO_MSSQL_TARGET_DB_NAME" value="{ADO_MSSQL_TARGET_DB_NAME}" class="button"></td>
+								</tr>
+								</table>
+								-->
+								<!-- MSSQL CONFIG FROM END -->
+							</td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="center">导入向导</td>
+						</tr>
+						<tr>
+							<td width="100%" colspan="2" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC">
+								<center>
+								<table width="98%">
+								<tr>
+									<td height="5"></td>
+								</tr>
+								<tr>
+									<td>请您设置好目标数据库的地址,用户名,密码和数据库名称.</td>
+								</tr>
+								<tr>
+									<td height="5"></td>
+								</tr>
+								</table>
+								</center>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" width="100%" colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="right"><input type="hidden" name="contents" value="{contents}"><input type="submit" value="下一步" class="button">&nbsp;&nbsp;</td>
+						</tr>
+					</table>
+					</center>
+					</form>

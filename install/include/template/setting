@@ -1,0 +1,38 @@
+<br><center>安装环境</center><br>
+<center><table width="95%" border="0" style="border-collapse: collapse" bgcolor="#FFFFFF">
+<tr align="center" class="cate">
+	    <td height="22" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">需求</td><td bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">推荐</td><td bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">基本</td><td bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC">当前</td>
+</tr>
+<tr align="center">
+	    <td height="22" style="border: 1px solid #CCCCCC">PHP</td><td style="border: 1px solid #CCCCCC">4.3.10</td><td style="border: 1px solid #CCCCCC">4.1.0</td><td style="border: 1px solid #CCCCCC"> phpversion </td>
+</tr>
+<tr align="center">
+	    <td height="22" style="border: 1px solid #CCCCCC">安全模式</td><td style="border: 1px solid #CCCCCC">关闭</td><td class="cateborder">关闭</td><td style="border: 1px solid #CCCCCC"> safe_mode </td>
+</tr>
+<tr align="center">
+	    <td height="22" style="border: 1px solid #CCCCCC">远程打开</td><td style="border: 1px solid #CCCCCC">开启</td><td style="border: 1px solid #CCCCCC">开启</td><td style="border: 1px solid #CCCCCC"> allow_url_fopen </td>
+</tr>
+<tr align="center">
+	    <td height="22" style="border: 1px solid #CCCCCC">GD图像库</td><td style="border: 1px solid #CCCCCC">开启</td><td style="border: 1px solid #CCCCCC">任意</td><td style="border: 1px solid #CCCCCC"> imageline </td>
+</tr>
+<tr align="center">
+	    <td height="22" style="border: 1px solid #CCCCCC">ICONV函数</td><td style="border: 1px solid #CCCCCC">开启</td><td style="border: 1px solid #CCCCCC">任意</td><td style="border: 1px solid #CCCCCC"> geticonv </td>
+</tr>
+<tr align="center">
+	    <td height="22" style="border: 1px solid #CCCCCC">tmp目录可写</td><td style="border: 1px solid #CCCCCC">可写</td><td style="border: 1px solid #CCCCCC">可写</td><td style="border: 1px solid #CCCCCC"> dirTmpCheck </td>
+</tr>
+<tr align="center">
+	    <td height="25" style="border: 1px solid #CCCCCC">include目录可写</td><td style="border: 1px solid #CCCCCC">可写</td><td style="border: 1px solid #CCCCCC">可写</td><td style="border: 1px solid #CCCCCC"> dirIncCheck </td>
+</tr>
+</table><br>
+<table width="95%" border="0" style="border-collapse: collapse">
+<tr align="center">
+<b><li>相关说明</li></b><br><br>
+<b>安全模式</b> : 由于本程序在采集的工程中需要一定的时间,并且要使用一些安全模式外的系统函数.在安全模式开启的情况下,将不能正常工作。<br><br>
+<b>远程打开</b> : 本程序采集的目标在于服务器之外,所以必须确认服务器的PHP设置中打开了 allow_url_fopen 。否则将不能采集目标。<br><br>
+<b>GD图像函数库</b> : 在将采集来的图片打上水印时候,本程序需要调用GD图像函数库,如果服务器不支持GD图像函数库,将不能使用水印功能。<br><br>
+<b>ICONV函数</b> : 在数据导入到其他数据库时,如果选择了utf8->GBK或者GBK->UTF-8转换,则需要用到此函数,否则将不能转换。<br><br>
+<b>tmp/include目录可写</b> : 本程序运行中,可能会有些临时文件写入到tmp目录,而且需要更改系统配置,因此需要将 tmp 和 include 目录 设为可写。
+</tr>
+</table></center>
+<input type=hidden name="error" value='ERRORINFO'>

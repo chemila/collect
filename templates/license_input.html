@@ -1,0 +1,41 @@
+		<form method=post action="index.php?module=generateLicense&action=generate">
+					<center>
+					<table width="98%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse" >
+						<tr>
+							<td height="25" width="100%"colspan="2" background="images/tb_background.gif"><p align="center"><font color="#FFFFFF">填写注册信息</font></td>
+						</tr>
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = '#FFFFFF'">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="30%"><center>注册名字</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<input type="text" name="user" size="30" value="{user}" class="button"></td>
+						</tr>
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = '#FFFFFF'">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="30%"><center>注册类型</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<input type="radio" name="type" value="server" checked>&nbsp;网络版 &nbsp;<input type="radio" name="type" value="local">&nbsp;本地版</td>
+						</tr>
+						<tr onMouseOver="this.style.backgroundColor = '#F7F7F7'" onMouseOut="this.style.backgroundColor = '#FFFFFF'">
+							<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#F7F7F7" width="30%"><center>保存文件</center></td>
+							<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<input type="checkbox" name="download" value="1" >保存授权码到本地</td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="center">注册说明</td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><p align="center">
+							<table width="98%">
+							<tr>
+								<td>
+								<br>
+								<li>1.本授权码生成程序负责生成授权码.
+								<li>2.授权码是根据您的服务器环境信息生成的,不会收集任何用户隐私.
+								<li>3.如果您打算购买本产品.则必须先通过本程序生成您注册的授权码,我们将通过此授权码生成序列号.<br><br>
+								</td>
+							</tr>
+							</table>
+							</td>
+						</tr>
+						<tr>
+							<td height="35" width="100%"colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="right"><input type=button value="返回上一页" OnClick="javascrpt:history.go(-1);" class="button">&nbsp;&nbsp;<input type="submit" value="生成授权码" class="button">&nbsp;&nbsp;</td>
+						</tr>
+					</table>
+					</center>
+		</form>

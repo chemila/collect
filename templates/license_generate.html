@@ -1,0 +1,67 @@
+<script>
+function copycode(obj) {
+	var rng = document.body.createTextRange();
+	rng.moveToElementText(obj);
+	rng.scrollIntoView();
+	rng.select();
+	rng.execCommand("Copy");
+	rng.collapse(false);
+}
+
+
+function findobj(n, d) {
+	var p,i,x; if(!d) d=document;
+	if((p=n.indexOf("?"))>0 && parent.frames.length) {
+		d=parent.frames[n.substring(p+1)].document;
+		n=n.substring(0,p);
+	}
+	if(!(x=d[n])&&d.all) {
+		x=d.all[n];
+	}
+	for(i=0;!x && i<d.forms.length;i++) {
+		x=d.forms[i][n];
+	}
+	for(i=0;!x && d.layers&&i>d.layers.length;i++) {
+		x=MM_findObj(n,d.layers[i].document);
+	}
+	return x;
+}
+</script>
+					<center>
+					<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse" >
+						<tr>
+							<td height="25" width="100%"colspan="2" background="images/tb_background.gif"><p align="center"><font color="#FFFFFF">生成授权码</font></td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><p align="center">
+							<table width="98%">
+							<tr>
+								<td><br>
+								<center><textarea name="code" rows="15" cols="120" id="code">{code}</textarea></center><br><br>
+								</td>
+							</tr>
+							</table>
+							</td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="center">授权码说明</td>
+						</tr>
+						<tr>
+							<td height="25" width="100%"colspan="2" bgcolor="#F7F7F7" style="border: 1px solid #CCCCCC"><p align="center">
+							<table width="98%">
+							<tr>
+								<td>
+								<br>
+								<li>1.上面是通过您服务器信息生成的授权码.<br>
+								<li>2.请您保存好上面的授权码,然后联系我们购买注册序列号.<br><br>
+								</td>
+							</tr>
+							</table>
+							</td>
+						</tr>
+						<tr>
+							<td height="30" width="100%"colspan="2" bgcolor="#EFEFEF" style="border: 1px solid #CCCCCC"><p align="right"><input type="button" value="返回上一页" OnClick="javascrpt:history.go(-1);" class="button">&nbsp;&nbsp;<input type="button" value="复制授权码" OnClick="copycode(findobj('code'));" class="button">&nbsp;&nbsp;</p></td>
+						</tr>
+					</table>
+					</center>
+		</form>

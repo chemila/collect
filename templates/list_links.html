@@ -1,0 +1,57 @@
+<a name="top"></a>
+<center>
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="25" bgcolor="#EFEFEF" colspan="2"><center>采集器『{rulesName}』测试结果</center></td>
+</tr>
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="25" width="50" bgcolor="#EFEFEF"><center>地址</center></td>
+	<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<a href="{fullIndexLink}" target="_blank">{indexLink}</a></td>
+</tr>
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="25" width="50" bgcolor="#EFEFEF"><center>总数</center></td>
+	<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;{totalLinksCount} 条</td>
+</tr>
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="25" width="50" bgcolor="#EFEFEF"><center>重复</center></td>
+	<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;{tautologyLinksCount} 条</td>
+</tr>
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="25" width="50" bgcolor="#EFEFEF"><center>报告</center></td>
+	<td style="border: 1px solid #CCCCCC">
+	&nbsp;&nbsp;无标题：{noneTitle} 条 | 有标题：{haveTitle} 条 | 无连接：{noneLink} 条 | 有连接：{haveLink} 条</td>
+</tr>
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="25" width="50" bgcolor="#EFEFEF"><center>分析</center></td>
+	<td style="border: 1px solid #CCCCCC">
+		<center>
+		<table width="100%" border=0>
+		<tr>
+			<td>该采集器 {analyse}</td>
+		</tr>
+		</table>
+		</center>
+	</td>
+</tr>
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="25" width="50" bgcolor="#EFEFEF"><center>操作</center></td>
+	<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<a href="?module=listRules" alt="返回采集器列表">采集器列表</a> | <a href="?module=editRules&ID={id}" alt="如果您发现编辑器规则不是很规范，可以点此修改当前采集器">编辑采集器</a> | <a href="?module=collectionLink&ID={id}" alt="在您确认连接无误后,就可以点此采集连接了" OnClick="return window.confirm('您确定要采集『{rulesName}』的连接了么?');">采连接列表</a></td>
+</tr>
+</table>
+<br>
+<!-- BEGIN list -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" style="border-collapse: collapse">
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="30" width="10%" bgcolor="#EFEFEF"><center>标题</center></td>
+	<td style="border: 1px solid #CCCCCC" bgcolor="#F7F7F7" width="70%">&nbsp;&nbsp;{title}</td>
+	<td style="border: 1px solid #CCCCCC" bgcolor="#F7F7F7" width="20%"><center><a href="?module=testBody&ID={rules}&url={getLink}" target="_blank" alt="测试提取文章：{title}的内容">测试提取</a></center></td>
+</tr>
+<tr>
+	<td style="border: 1px solid #CCCCCC" height="30" bgcolor="#EFEFEF"><center>连接</center></td>
+	<td style="border: 1px solid #CCCCCC">&nbsp;&nbsp;<a href="{fulllink}" target="_blank" alt="完整地址:{fulllink}">{link}</a></td>
+	<td style="border: 1px solid #CCCCCC"><center><a href="#top">返回顶部</a></center></td>
+</tr>
+</table>
+<br>
+<!-- END list -->
+</center>
